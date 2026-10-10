@@ -1,0 +1,42 @@
+[browser] ./app/components/homelayout/Banner.tsx:31:16
+Error: Expected '</', got 'jsx text'
+  29 |             <br />
+  30 |             <span className="text-[#F26A21]">{data.title.highlighted}</span>
+> 31 |           </h1>
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |
+     | ^
+> 33 |           <p className="mt-5 max-w-[500px] text-[15px] leading-[1.7] font-semibold text-[#...
+     | ^^^^^^^^^^
+  34 |             {data.desc}
+  35 |           </p>
+  36 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./app/components/homelayout/Banner.tsx
+    ./app/components/section/home/HomeSection.tsx
+    ./app/page.tsx 
+[browser] ./app/components/homelayout/Banner.tsx:31:16
+Error: Expected '</', got 'jsx text'
+  29 |             <br />
+  30 |             <span className="text-[#F26A21]">{data.title.highlighted}</span>
+> 31 |           </h1>
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |
+     | ^
+> 33 |           <p className="mt-5 max-w-[500px] text-[15px] leading-[1.7] font-semibold text-[#...
+     | ^^^^^^^^^^
+  34 |             {data.desc}
+  35 |           </p>
+  36 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./app/components/homelayout/Banner.tsx
+    ./app/components/section/home/HomeSection.tsx
+    ./app/page.tsx 

@@ -1,0 +1,874 @@
+{
+  "CourierIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "CourierTopbar1",
+          "Header": "CourierHeader1",
+          "Footer": "CourierFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              { "key": "Banner", "component": "CourierBanner1" },
+              { "key": "About", "component": "CourierAbout1" },
+              { "key": "Services", "component": "CourierServices1" },
+              { "key": "Testimonial", "component": "CourierTestimonial1" },
+              { "key": "Stats", "component": "CourierStats1" },
+              { "key": "Choose", "component": "CourierChoose1" },
+              { "key": "Faq", "component": "CourierFaq1" },
+              { "key": "Blog", "component": "CourierBlog1" }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Topbar": {
+        "variants": {
+          "CourierTopbar1": {
+            "phone": "+1 00000000",
+            "phoneHref": "tel:+1 00000000",
+            "email": "info@xyz.com",
+            "emailHref": "mailto:info@xyz.com",
+            "workingHours": "Mon - Sat: 9:00 AM - 6:00 PM"
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "CourierHeader1": {
+            "site": {
+              "siteName": "Caurier",
+              "logo": {
+                "normal": "/logo.png",
+                "alt": "Caurier"
+              }
+            },
+            "nav": [
+              { "label": "Home", "href": "/" },
+              { "label": "About Us", "href": "/about" },
+              { "label": "Services", "href": "/services" },
+              { "label": "Faq", "href": "/faq" },
+              { "label": "Blog", "href": "/blog" },
+              { "label": "Contact", "href": "/contact" }
+            ],
+            "buttons": [
+              {
+                "label": "Get a Quote",
+                "href": "/contact",
+                "icon": "send",
+                "variant": "primary"
+              }
+            ]
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "CourierBanner1": {
+            "badge": "YOUR TRUSTED COURIER PARTNER",
+            "title": {
+              "normal": "Fast & Reliable",
+              "highlighted": "Courier Services"
+            },
+            "desc": "We deliver your parcels safely, on time and everywhere. Domestic & international courier solutions for individuals and businesses.",
+            "highlights": [
+              { "id": 1, "icon": "truck", "title": "Quick Delivery" },
+              { "id": 2, "icon": "shield-check", "title": "Safe & Secure" },
+              { "id": 3, "icon": "globe", "title": "Global Coverage" }
+            ],
+            "image": {
+              "src": "/courier/img6.png",
+              "alt": "Caurier delivery man beside a delivery van with an airplane flying above"
+            }
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "CourierAbout1": {
+            "badge": "ABOUT US",
+            "title": {
+              "normal": "Your Trusted Partner in",
+              "highlighted": "Logistics & Transportation"
+            },
+            "paragraph": "Caurier is a reliable logistics and transportation company dedicated to delivering safe, fast, and efficient shipping solutions across domestic and international destinations. With a customer-first approach and years of industry experience, we ensure your goods reach their destination on time, every time.",
+            "image": {
+              "src": "/courier/img7.png",
+              "alt": "Cargo truck on a highway at sunset"
+            },
+            "secondaryImage": {
+              "src": "/courier/img4.png",
+              "alt": "Container ship with an airplane flying overhead"
+            },
+            "experienceBadge": {
+              "number": 25,
+              "suffix": "+",
+              "label": "Years of Experience",
+              "subLabel": "in Logistics & Transportation"
+            },
+            "features": [
+              {
+                "id": 1,
+                "icon": "globe",
+                "title": "Global Reach",
+                "description": "We provide seamless domestic and international shipping solutions to connect businesses worldwide."
+              },
+              {
+                "id": 2,
+                "icon": "package",
+                "title": "Reliable Delivery",
+                "description": "Our advanced network and experienced team ensure your shipments are delivered safely and on schedule."
+              }
+            ],
+            "button": {
+              "label": "More About Us",
+              "href": "/about",
+              "icon": "arrow-right"
+            }
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "CourierServices1": {
+            "banner": {
+              "title": "Services",
+              "currentPage": "Services",
+              "backgroundImage": "/courier/img5.png"
+            },
+            "pageIntro": {
+              "badge": "OUR SERVICE",
+              "title": {
+                "normal": "Comprehensive",
+                "highlighted": "Courier Services"
+              },
+              "paragraph": [
+                "From door-to-door parcels to large scale freight, we manage every shipment with precision, care and complete transparency."
+              ]
+            },
+            "badge": "OUR SERVICES",
+            "title": {
+              "normal": "Provide Efficient Logistics",
+              "highlighted": "Solutions Business"
+            },
+            "services": [
+              {
+                "id": 1,
+                "slug": "road-freight",
+                "icon": "truck",
+                "image": "/courier/img1.png",
+                "title": "Road Freight",
+                "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 2,
+                "slug": "ocean-freight",
+                "icon": "ship",
+                "image": "/courier/img2.png",
+                "title": "Ocean Freight",
+                "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 3,
+                "slug": "air-freight",
+                "icon": "plane",
+                "image": "/courier/img5.png",
+                "title": "Air Freight",
+                "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 4,
+                "slug": "railway-freight",
+                "icon": "train-front",
+                "image": "/courier/img8.png",
+                "title": "Railway Freight",
+                "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 5,
+                "slug": "warehousing",
+                "icon": "warehouse",
+                "image": "/courier/img10.png",
+                "title": "Warehousing",
+                "description": "We offer secure storage and efficient inventory management solutions to keep your goods organized and ready for delivery.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 6,
+                "slug": "packaging-solutions",
+                "icon": "package",
+                "image": "/courier/img4.png",
+                "title": "Packaging Solutions",
+                "description": "Our reliable packaging services help protect your shipments during transit and ensure they arrive safely at their destination.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 7,
+                "slug": "customs-clearance",
+                "icon": "clipboard-check",
+                "image": "/courier/img6.png",
+                "title": "Customs Clearance",
+                "description": "We simplify international shipping with dependable customs documentation and clearance support for smooth cross-border delivery.",
+                "button": { "label": "Read More", "href": "/services" }
+              },
+              {
+                "id": 8,
+                "slug": "last-mile-delivery",
+                "icon": "map-pin",
+                "image": "/courier/img7.png",
+                "title": "Last-Mile Delivery",
+                "description": "We provide dependable last-mile delivery services to get packages from distribution centers directly to your customers.",
+                "button": { "label": "Read More", "href": "/services" }
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "CourierTestimonial1": {
+            "badge": "CLIENT FEEDBACK",
+            "title": {
+              "normal": "Happy Client Feedback",
+              "highlighted": "About Our Service"
+            },
+            "desc": "We are proud to have earned the trust of businesses worldwide. Here's what our valued clients say about their experience with our logistics services.",
+            "image": {
+              "src": "/courier/img6.png",
+              "alt": "Cargo truck at a container port with cranes in the background"
+            },
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "William Adams",
+                "designation": "Operations Manager",
+                "image": "/people/man1.png",
+                "rating": 5,
+                "quote": "The team has been outstanding in handling all our shipment requirements. Their professionalism, timely delivery, and real-time tracking give us complete peace of mind. We highly recommend their logistics services to any business looking for a reliable partner."
+              },
+              {
+                "id": 2,
+                "name": "Sophia Bennett",
+                "designation": "Logistics Coordinator",
+                "image": "/people/women1.png",
+                "rating": 5,
+                "quote": "From the first pickup to the final delivery, everything was handled with care and precision. Their customer support is responsive and the tracking updates kept us informed at every step. A dependable partner for our growing business."
+              },
+              {
+                "id": 3,
+                "name": "James Carter",
+                "designation": "Supply Chain Director",
+                "image": "/people/men2.png",
+                "rating": 4,
+                "quote": "Reliable, efficient and professional. They consistently meet our tight deadlines and their global network has helped us expand into new markets with confidence. We could not ask for a better logistics provider."
+              }
+            ],
+            "carousel": {
+              "hasArrows": true,
+              "hasDots": true,
+              "activeDot": 1,
+              "totalDots": 3
+            }
+          }
+        }
+      },
+      "Stats": {
+        "variants": {
+          "CourierStats1": {
+            "bgImage": "/statsbgimage.png",
+            "items": [
+              {
+                "id": 1,
+                "icon": "globe",
+                "number": 110,
+                "suffix": "+",
+                "label": "Worldwide Branches"
+              },
+              {
+                "id": 2,
+                "icon": "users",
+                "number": 175,
+                "suffix": "k",
+                "label": "Expert Employee"
+              },
+              {
+                "id": 3,
+                "icon": "smile",
+                "number": 550,
+                "suffix": "+",
+                "label": "Satisfied Customers"
+              },
+              {
+                "id": 4,
+                "icon": "package-check",
+                "number": 995,
+                "suffix": "+",
+                "label": "Successful Delivery"
+              }
+            ]
+          }
+        }
+      },
+      "Choose": {
+        "variants": {
+          "CourierChoose1": {
+            "badge": "WHY CHOOSE US",
+            "title": {
+              "normal": "Efficient, Safe, & Swift",
+              "highlighted": "Logistics Solution!"
+            },
+            "desc": "We are committed to delivering reliable, efficient, and cost-effective logistics solutions that meet your business needs worldwide.",
+            "features": [
+              {
+                "id": 1,
+                "icon": "globe",
+                "title": "Global Network",
+                "desc": "Strong international presence for seamless deliveries."
+              },
+              {
+                "id": 2,
+                "icon": "shield-check",
+                "title": "Safe & Secure",
+                "desc": "Your goods are always protected with advanced security measures."
+              },
+              {
+                "id": 3,
+                "icon": "truck",
+                "title": "On-Time Delivery",
+                "desc": "We ensure timely and reliable delivery for every shipment."
+              },
+              {
+                "id": 4,
+                "icon": "users",
+                "title": "Expert Team",
+                "desc": "A professional team with industry experience you can trust."
+              }
+            ],
+            "image": {
+              "src": "/courier/img11.png",
+              "alt": "Cargo truck at a container port with an airplane flying overhead"
+            }
+          }
+        }
+      },
+      "Faq": {
+        "variants": {
+          "CourierFaq1": {
+            "badge": "FAQ",
+            "title": {
+              "normal": "Your Frequently",
+              "highlighted": "Ask & Questions"
+            },
+            "desc": "Find quick answers to common questions about our logistics and transportation services.",
+            "faqs": [
+              {
+                "id": 1,
+                "question": "What Happens If My Shipment Is Delayed Or Lost?",
+                "answer": "In the rare case of a delay or loss, our team immediately investigates the issue and provides real-time updates. We have insurance coverage and proper handling procedures to ensure your goods are safe and secured."
+              },
+              {
+                "id": 2,
+                "question": "What Is Last-Mile Delivery And Why Is It Important?"
+              },
+              {
+                "id": 3,
+                "question": "How Can I Reduce My Transportation Costs?"
+              },
+              {
+                "id": 4,
+                "question": "How Do You Ensure The Safety And Security Of Goods In Transit?"
+              }
+            ],
+            "image": {
+              "src": "/courier/img4.png",
+              "alt": "Worker in a safety helmet holding a clipboard in front of shipping containers"
+            }
+          }
+        }
+      },
+      "FaqPage": {
+        "variants": {
+          "CourierFaqPage1": {
+            "banner": {
+              "title": "Faq",
+              "currentPage": "Faq",
+              "backgroundImage": "/courier/img5.png"
+            },
+            "badge": "FAQ",
+            "title": {
+              "normal": "Frequently",
+              "highlighted": "Asked Questions"
+            },
+            "description": "Find answers to common questions about our road freight services, delivery timelines, shipping costs, tracking and much more.",
+            "leftCard": {
+              "subtitle": "HAVE ANY QUESTIONS?",
+              "title": "We're Here To Help You",
+              "paragraph": "Find quick answer to common questions, about our freight and logistic services.",
+              "bgImage": "/courier/img12.png"
+            },
+            "faqs": [
+              {
+                "id": "01",
+                "question": "What happens if my shipment is delayed or lost?",
+                "answer": "In the rare case of a delay or loss, our team immediately investigates the issue and keeps you updated in real time. Every shipment is covered by insurance and handled using strict procedures to ensure your goods stay safe and secure throughout the journey."
+              },
+              {
+                "id": "02",
+                "question": "What is last-mile delivery and why is it important?",
+                "answer": "Last-mile delivery is the final step that moves your parcel from our local distribution hub directly to the customer's door. It is important because it is the most visible part of the delivery experience and has a direct impact on customer satisfaction and on-time performance."
+              },
+              {
+                "id": "03",
+                "question": "How can I reduce my transportation costs?",
+                "answer": "Consolidating shipments, planning ahead for non-urgent cargo, and choosing the right freight mode for each load can significantly reduce your transportation spend. Our logistics experts can review your supply chain and recommend the most cost-effective options."
+              },
+              {
+                "id": "04",
+                "question": "How do you ensure the safety and security of goods in transit?",
+                "answer": "We use secure packaging, GPS-enabled tracking, sealed containers and trained handling staff at every stage. High-value shipments can also be insured and monitored around the clock for complete peace of mind."
+              },
+              {
+                "id": "05",
+                "question": "Do you offer both domestic and international shipping?",
+                "answer": "Yes. We provide door-to-door domestic courier services as well as international freight solutions by road, air, ocean and rail, backed by a strong global partner network."
+              },
+              {
+                "id": "06",
+                "question": "How can I track my shipment in real time?",
+                "answer": "Every shipment is assigned a unique tracking number. Simply enter it on our tracking page or app to view live location updates, estimated delivery time and complete movement history."
+              },
+              {
+                "id": "07",
+                "question": "Which items are prohibited from shipping?",
+                "answer": "Hazardous materials, flammable goods, illegal substances, perishables without proper clearance and other restricted items cannot be shipped. Please contact our support team if you are unsure whether your goods are safe to transport."
+              },
+              {
+                "id": "08",
+                "question": "How is the shipping cost calculated?",
+                "answer": "Shipping cost depends on the weight, dimensions, destination and delivery speed you choose. Use our instant quote tool or contact our team for a detailed, transparent price estimate with no hidden charges."
+              },
+              {
+                "id": "09",
+                "question": "Do you provide warehousing and storage solutions?",
+                "answer": "Yes. We offer secure, climate-controlled warehousing with real-time inventory management so your goods stay organized and ready for dispatch whenever you need them."
+              },
+              {
+                "id": "10",
+                "question": "How long does customs clearance usually take?",
+                "answer": "Customs clearance typically takes one to three business days when all documentation is complete. Our dedicated customs team prepares and verifies every form in advance to minimize delays at the border."
+              }
+            ]
+          }
+        }
+      },
+      "Contact": {
+        "variants": {
+          "CourierContact1": {
+            "banner": {
+              "title": "Contact",
+              "currentPage": "Contact",
+              "backgroundImage": "/courier/img5.png"
+            },
+            "infoCards": [
+              {
+                "id": 1,
+                "icon": "mail",
+                "title": "Email Address",
+                "value": "info@xyz.com",
+                "href": "mailto:info@xyz.com"
+              },
+              {
+                "id": 2,
+                "icon": "phone",
+                "title": "Phone Number",
+                "value": "+1 00000000",
+                "href": "tel:+1 00000000"
+              },
+              {
+                "id": 3,
+                "icon": "map-pin",
+                "title": "Our Location",
+                "value": "123 New York, USA"
+              }
+            ],
+            "formHeader": {
+              "badge": "CONTACT US",
+              "title": {
+                "normal": "Send Us a",
+                "highlighted": "Message"
+              },
+              "description": "Have questions about our freight and logistics services? Fill out the form below and our team will get back to you as soon as possible."
+            },
+            "subjects": [
+              "General Inquiry",
+              "Road Freight",
+              "Ocean Freight",
+              "Air Freight",
+              "Railway Freight",
+              "Warehousing",
+              "Others"
+            ],
+            "mapEmbedUrl": "https://www.google.com/maps?q=Transport%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh%2C%20India&output=embed"
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "CourierBlog1": {
+            "banner": {
+              "title": "Blog",
+              "currentPage": "Blog",
+              "backgroundImage": "/courier/img5.png"
+            },
+            "badge": "BLOG & NEWS",
+            "title": {
+              "normal": "Latest News Directly",
+              "highlighted": "From Our Blog"
+            },
+            "desc": "Stay updated with the latest insights, trends, and logistics news to keep your business moving forward.",
+            "posts": [
+              {
+                "id": 1,
+                "slug": "importance-of-on-time-delivery-in-business-growth",
+                "image": "/courier/img7.png",
+                "day": "20",
+                "month": "Jun",
+                "author": "Admin",
+                "comments": "02 Comments",
+                "title": "The Importance of On-Time Delivery in Business Growth",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 2,
+                "slug": "challenges-and-opportunities-in-modern-supply-chains",
+                "image": "/courier/img9.png",
+                "day": "22",
+                "month": "Aug",
+                "author": "Admin",
+                "comments": "05 Comments",
+                "title": "Challenges and Opportunities in Modern Supply Chains",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 3,
+                "slug": "sustainable-transportation-going-green-in-logistics",
+                "image": "/courier/img12.png",
+                "day": "17",
+                "month": "Jan",
+                "author": "Admin",
+                "comments": "03 Comments",
+                "title": "Sustainable Transportation: Going Green in Logistics",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 4,
+                "slug": "how-technology-is-transforming-last-mile-delivery",
+                "image": "/courier/img1.png",
+                "day": "05",
+                "month": "Feb",
+                "author": "Admin",
+                "comments": "04 Comments",
+                "title": "How Technology Is Transforming Last-Mile Delivery",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 5,
+                "slug": "top-tips-to-reduce-your-shipping-costs",
+                "image": "/courier/img2.png",
+                "day": "12",
+                "month": "Mar",
+                "author": "Admin",
+                "comments": "06 Comments",
+                "title": "Top Tips To Reduce Your Shipping Costs",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 6,
+                "slug": "warehouse-management-best-practices-for-growing-businesses",
+                "image": "/courier/img10.png",
+                "day": "28",
+                "month": "Apr",
+                "author": "Admin",
+                "comments": "01 Comment",
+                "title": "Warehouse Management Best Practices For Growing Businesses",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 7,
+                "slug": "air-freight-vs-ocean-freight-which-is-right-for-you",
+                "image": "/courier/img5.png",
+                "day": "09",
+                "month": "May",
+                "author": "Admin",
+                "comments": "03 Comments",
+                "title": "Air Freight Vs Ocean Freight: Which Is Right For You?",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 8,
+                "slug": "the-role-of-warehousing-in-a-smooth-supply-chain",
+                "image": "/courier/img11.png",
+                "day": "14",
+                "month": "Jun",
+                "author": "Admin",
+                "comments": "07 Comments",
+                "title": "The Role Of Warehousing In A Smooth Supply Chain",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 9,
+                "slug": "customs-clearance-explained-for-first-time-exporters",
+                "image": "/courier/img6.png",
+                "day": "21",
+                "month": "Jul",
+                "author": "Admin",
+                "comments": "02 Comments",
+                "title": "Customs Clearance Explained For First-Time Exporters",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 10,
+                "slug": "why-real-time-tracking-matters-for-your-shipments",
+                "image": "/courier/img8.png",
+                "day": "03",
+                "month": "Aug",
+                "author": "Admin",
+                "comments": "05 Comments",
+                "title": "Why Real-Time Tracking Matters For Your Shipments",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 11,
+                "slug": "packaging-do-and-donts-for-safe-delivery",
+                "image": "/courier/img4.png",
+                "day": "18",
+                "month": "Sep",
+                "author": "Admin",
+                "comments": "08 Comments",
+                "title": "Packaging Do's And Don'ts For Safe Delivery",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 12,
+                "slug": "building-a-resilient-supply-chain-in-uncertain-times",
+                "image": "/courier/img12.png",
+                "day": "27",
+                "month": "Oct",
+                "author": "Admin",
+                "comments": "03 Comments",
+                "title": "Building A Resilient Supply Chain In Uncertain Times",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 13,
+                "slug": "railway-freight-a-cost-effective-way-to-move-goods",
+                "image": "/courier/img9.png",
+                "day": "06",
+                "month": "Nov",
+                "author": "Admin",
+                "comments": "04 Comments",
+                "title": "Railway Freight: A Cost-Effective Way To Move Goods",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 14,
+                "slug": "customer-experience-the-key-to-logistics-success",
+                "image": "/courier/img7.png",
+                "day": "15",
+                "month": "Dec",
+                "author": "Admin",
+                "comments": "09 Comments",
+                "title": "Customer Experience: The Key To Logistics Success",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 15,
+                "slug": "future-trends-every-logistics-business-should-watch",
+                "image": "/courier/img11.png",
+                "day": "29",
+                "month": "Dec",
+                "author": "Admin",
+                "comments": "05 Comments",
+                "title": "Future Trends Every Logistics Business Should Watch",
+                "description": "We provide reliable and efficient transportation solutions that connect businesses and people across the globe.",
+                "readMoreText": "Read More"
+              }
+            ],
+            "button": {
+              "label": "View All Blogs",
+              "href": "/blog",
+              "icon": "chevrons-right"
+            }
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "CourierFooter1": {
+            "logoImage": "/footerlogo.png",
+            "footerImage": "/courier/img10.png",
+            "logoAlt": "Caurier",
+            "siteName": "Caurier",
+            "desc": "Caurier is your trusted courier partner delivering parcels safely, on time and everywhere. Domestic & international shipping solutions for individuals and businesses.",
+            "socialLinks": [
+              { "label": "facebook", "href": "https://www.facebook.com/" },
+              { "label": "x", "href": "https://x.com/" },
+              { "label": "pinterest", "href": "https://www.pinterest.com/" },
+              { "label": "instagram", "href": "https://www.instagram.com/" }
+            ],
+            "columns": [
+              {
+                "title": "Quick Links",
+                "links": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "About Us", "href": "/about" },
+                  { "label": "Services", "href": "/services" },
+                  { "label": "Blog", "href": "/blog" },
+                  { "label": "FAQ", "href": "/faq" },
+                  { "label": "Contact Us", "href": "/contact" }
+                ]
+              },
+              {
+                "title": "Our Services",
+                "links": [
+                  { "label": "Road Freight", "href": "/services" },
+                  { "label": "Ocean Freight", "href": "/services" },
+                  { "label": "Air Freight", "href": "/services" },
+                  { "label": "Railway Freight", "href": "/services" },
+                  { "label": "Bus Freight", "href": "/services" },
+                  { "label": "Hand Delivery", "href": "/services" }
+                ]
+              }
+            ],
+            "footerContact": {
+              "title": "Contact Us",
+              "items": [
+                {
+                  "icon": "map-pin",
+                  "label": "Our Address",
+                  "lines": [
+                    { "text": "123, New York," },
+                    { "text": "USA," },
+                    { "text": "USA" }
+                  ]
+                },
+                {
+                  "icon": "phone",
+                  "label": "Call Us",
+                  "lines": [
+                    { "text": "+1 00000000", "href": "tel:+1 00000000" }
+                  ]
+                },
+                {
+                  "icon": "mail",
+                  "label": "Send E-Mail",
+                  "lines": [
+                    {
+                      "text": "info@xyz.com",
+                      "href": "mailto:info@xyz.com"
+                    }
+                  ]
+                }
+              ]
+            },
+            "copyright": {
+              "prefix": "\u00a9",
+              "brand": "copyright 2026 ",
+              "suffix": ". All rights reserved. Powered by Lestow."
+            }
+          }
+        }
+      },
+      "AboutPage": {
+        "variants": {
+          "CourierAbout1": {
+            "banner": {
+              "title": "About Us",
+              "currentPage": "About Us",
+              "backgroundImage": "/courier/img5.png"
+            },
+            "badge": "About Us",
+            "title": {
+              "prefix": "Your Trusted Partner In",
+              "highlight": "Courier",
+              "suffix": "And Logistics"
+            },
+            "paragraphs": [
+              "At Caurier, we are committed to delivering more than just parcels — we deliver trust, reliability, and seamless logistics solutions. With years of experience in the courier and transportation industry, we ensure your packages reach their destination safely, on time, and every time.",
+              "At Caurier, we are committed to delivering more than just parcels — we deliver trust, reliability, and seamless logistics solutions. With years of experience in the courier and transportation industry, we ensure your packages reach their destination safely, on time, and every time.",
+              "At Caurier, we are committed to delivering more than just parcels — we deliver trust, reliability, and seamless logistics solutions. With years of experience in the courier and transportation industry, we ensure your packages reach their destination safely, on time, and every time."
+            ],
+            "experienceBadge": {
+              "number": "30+",
+              "label": "Years Of Experience"
+            },
+            "mainImage": "/courier/img8.png",
+            "circularImage": "/courier/img9.png"
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "CourierTeam1": {
+            "badge": "OUR TEAM MEMBERS",
+            "title": {
+              "normal": "Introduce Our Expert",
+              "highlighted": "Logistic Teams"
+            },
+            "description": "Our experienced team works with dedication to deliver safe, timely, and reliable logistics solutions for your business.",
+            "members": [
+              {
+                "id": 1,
+                "name": "William James",
+                "role": "Operations Manager",
+                "image": "/people/man1.png",
+                "slug": "william-james"
+              },
+              {
+                "id": 2,
+                "name": "Camilo Gillian",
+                "role": "Logistics Coordinator",
+                "image": "/people/men2.png",
+                "slug": "camilo-gillian"
+              },
+              {
+                "id": 3,
+                "name": "Alex Fluran",
+                "role": "Supply Chain Manager",
+                "image": "/people/men4.png",
+                "slug": "alex-fluran"
+              },
+              {
+                "id": 4,
+                "name": "Mark Donald",
+                "role": "Fleet Manager",
+                "image": "/people/men3.png",
+                "slug": "mark-donald"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
