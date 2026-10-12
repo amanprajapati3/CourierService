@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Check } from "lucide-react";
 import type { CourierBlogPost } from "@/data";
 import PageBanner from "@/app/components/shared/PageBanner";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import { site } from "@/data";
 
 interface BlogDetailProps {
@@ -25,12 +27,14 @@ export default function BlogDetail({ post }: BlogDetailProps) {
         ]}
       />
 
-      <main className="bg-[#f7f9fc] px-0 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <ScrollReveal as="main" direction="right" mobileDirection="up" className="bg-[#f7f9fc] px-0 py-3 sm:px-6 sm:py-4 lg:px-8">
         <article className="mx-auto max-w-[1320px] bg-white px-4 py-4 sm:px-7 sm:py-6 lg:px-10 lg:py-7">
           <div className="relative overflow-hidden rounded-md">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
+              width={1200}
+              height={775}
               className="aspect-[1.55/1] w-full object-cover sm:aspect-[2.9/1]"
             />
             <div className="absolute left-4 top-4 rounded-md bg-[#f04b16] px-4 py-2 text-center text-white shadow-md sm:left-5 sm:top-5">
@@ -58,7 +62,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 : post.description}
             </p>
 
-            <section className="mt-5">
+            <ScrollReveal as="section" direction="left" mobileDirection="up" className="mt-5">
               <h3 className="text-2xl font-bold leading-tight text-[#0b1b4d] sm:text-3xl">
                 {isFeaturedArticle ? (
                   <>
@@ -76,9 +80,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                   ? "At our company, we focus on providing reliable and efficient transportation solutions tailored to your business needs. With a well-maintained fleet, advanced tracking systems, and an experienced team, we ensure that every shipment reaches its destination safely and on time. Our commitment to quality service helps businesses streamline their supply chain and meet customer expectations without delay."
                   : `Our ${post.title.toLowerCase()} article explores practical ways to improve reliability, strengthen customer relationships, and keep shipments moving. With experienced logistics professionals and dependable transportation solutions, businesses can meet delivery expectations with confidence.`}
               </p>
-            </section>
+            </ScrollReveal>
 
-            <section className="mt-5">
+            <ScrollReveal as="section" direction="right" mobileDirection="up" className="mt-5">
               <h3 className="text-2xl font-bold leading-tight text-[#0b1b4d] sm:text-3xl">
                 {isFeaturedArticle ? (
                   <>
@@ -96,22 +100,26 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                   ? "With years of experience in the logistics industry, our team has developed the expertise to handle shipments of all sizes and complexities. From route planning and documentation to real-time monitoring, we manage every aspect with precision and care. Our deep industry knowledge allows us to anticipate challenges and provide effective solutions, ensuring smooth and timely delivery across domestic and international routes."
                   : "A clear plan, accurate information, and consistent communication make every supply chain stronger. Use these insights to identify opportunities, solve common shipping challenges, and deliver a better experience to your customers."}
               </p>
-            </section>
+            </ScrollReveal>
 
-            <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <img
-                src="/courier/img2.png"
+            <ScrollReveal as="div" direction="up" className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <Image
+                src="/courier2/img2.webp"
                 alt="Cargo ship carrying containers across the ocean"
+                width={800}
+                height={600}
                 className="h-44 w-full rounded-md object-cover sm:h-52"
               />
-              <img
-                src="/courier/img1.png"
+              <Image
+                src="/courier2/img1.webp"
                 alt="Freight containers moving by road"
+                width={800}
+                height={600}
                 className="h-44 w-full rounded-md object-cover sm:h-52"
               />
-            </div>
+            </ScrollReveal>
 
-            <section className="mt-5">
+            <ScrollReveal as="section" direction="left" mobileDirection="up" className="mt-5">
               <h3 className="text-2xl font-bold leading-tight text-[#0b1b4d] sm:text-3xl">
                 {isFeaturedArticle ? (
                   <>
@@ -142,9 +150,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                   </li>
                 ))}
               </ul>
-            </section>
+            </ScrollReveal>
 
-            <section className="mt-5">
+            <ScrollReveal as="section" direction="right" mobileDirection="up" className="mt-5">
               <h3 className="text-2xl font-bold leading-tight text-[#0b1b4d] sm:text-3xl">
                 {isFeaturedArticle ? (
                   <>
@@ -160,7 +168,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               <p className="mt-2 text-base leading-[1.55] text-[#737f91]">
                 Professional transport services help businesses reduce risks, improve operational efficiency, and ensure customer satisfaction. By partnering with a trusted logistics provider, companies can focus on their core operations while their transportation needs are handled by experts.
               </p>
-            </section>
+            </ScrollReveal>
 
             <Link
               href="/blog"
@@ -171,7 +179,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             </Link>
           </div>
         </article>
-      </main>
+      </ScrollReveal>
     </>
   );
 }

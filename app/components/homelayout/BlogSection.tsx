@@ -2,10 +2,12 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { LuChevronLeft, LuChevronRight, LuChevronsRight, LuMessageSquare, LuUser } from "react-icons/lu";
 import { IoIosAirplane } from "react-icons/io";
 
 import { site, type CourierBlogData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const PER_PAGE = 6;
 
@@ -35,7 +37,12 @@ export default function CourierBlog1({
   };
 
   return (
-    <section className={`bg-white pb-24 pt-8 md:py-12 ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="up"
+      mobileDirection="left"
+      className={`bg-white pb-24 pt-8 md:py-12 ${className}`}
+    >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         {/* centered heading */}
         <div className="text-center">
@@ -60,15 +67,21 @@ export default function CourierBlog1({
         </div>
 
         <div ref={gridRef} className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p) => (
-            <article
+          {posts.map((p, i) => (
+            <ScrollReveal
               key={p.id}
+              as="article"
+              direction="up"
+              index={i}
+              staggerChildren={0.08}
               className="group rounded-md bg-white shadow-[0_12px_34px_rgba(11,27,77,0.1)]"
             >
               <div className="relative ">
-                <img
+                <Image
                   src={p.image}
                   alt={p.title}
+                  width={800}
+                  height={600}
                   className="h-[210px] w-full rounded-t-xl object-cover transition-transform duration-500 "
                 />
                 <div className="absolute right-3 -top-3 rounded bg-[#F26A21] px-3 py-1.5 text-center text-white shadow-md">
@@ -88,7 +101,7 @@ export default function CourierBlog1({
                     {p.comments}
                   </span>
                 </div>
-                <h3 className="mt-3 text-[25px] font-semibold leading-snug text-[#07247a]">{p.title}</h3>
+                <h3 className="mt-3 text-[25px]  min-h-18 font-semibold leading-snug text-[#07247a]">{p.title}</h3>
                 <p className="mt-2.5 text-[16px] leading-[1.7] text-[#2c2f38]">{p.description}</p>
                 <Link
                   href={`/blog/${p.slug}`}
@@ -98,7 +111,7 @@ export default function CourierBlog1({
                   <LuChevronsRight size={26} />
                 </Link>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
 
@@ -156,6 +169,6 @@ export default function CourierBlog1({
           </div>
         )}
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

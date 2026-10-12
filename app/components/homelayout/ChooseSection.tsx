@@ -1,5 +1,7 @@
 import { LuGlobe, LuShieldCheck, LuTruck, LuUsers } from "react-icons/lu";
+import Image from "next/image";
 import { site, type CourierChooseData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // one icon per feature card, in the same order as data.features
 const featureIcons = [LuGlobe, LuShieldCheck, LuTruck, LuUsers];
@@ -9,10 +11,15 @@ export default function CourierChoose1({
   className = "",
 }: SectionProps<CourierChooseData>) {
   return (
-    <section className={`bg-white py-8 md:py-12 ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="left"
+      mobileDirection="up"
+      className={`bg-white py-8 md:py-12 ${className}`}
+    >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14">
-          <div className=" lg:pl-12">
+          <ScrollReveal as="div" direction="left" mobileDirection="up" className="lg:pl-12">
             <div className="flex items-center gap-2.5 text-[18px] font-bold uppercase tracking-[0.12em] text-[#e45204]">
               <span className="font-teko text-[18px]">{data.badge}</span>
               <span className="h-[2px] w-9 bg-[#ca5617]" />
@@ -30,8 +37,12 @@ export default function CourierChoose1({
               {data.features.map((f, i) => {
                 const Icon = featureIcons[i];
                 return (
-                  <div
+                  <ScrollReveal
                     key={f.id}
+                    as="div"
+                    direction="up"
+                    index={i}
+                    staggerChildren={0.1}
                     className="flex items-start gap-4 rounded-md bg-white p-4 shadow-[0_8px_26px_rgba(11,27,77,0.09)]"
                   >
                     <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full  bg-[#fcd8be] text-[#ff5900]">
@@ -45,26 +56,28 @@ export default function CourierChoose1({
                       <p className="mt-1 text-[14px] leading-relaxed text-[#272a35]">
                         {f.desc}
                       </p>
-                    </div>
                   </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* image with orange corner accent */}
-          <div className="relative">
+          <ScrollReveal as="div" direction="right" mobileDirection="up" className="relative">
             <div
               className="absolute -left-2 h-[100%] rounded-xl w-[5%]  bg-[#ff5b02]"
             />
-            <img
+            <Image
               src={data.image.src}
               alt={data.image.alt}
+              width={800}
+              height={900}
               className="relative h-[320px] w-full rounded-tl-[18px] rounded-br-[8px] object-cover shadow-xl sm:h-[420px] lg:h-[480px]"
             />
-          </div>
+          </ScrollReveal>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

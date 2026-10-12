@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   LuChevronsRight,
   LuClipboardCheck,
@@ -11,6 +12,7 @@ import {
   LuWarehouse,
 } from "react-icons/lu";
 import type { CourierServiceItem } from "@/data";
+import ScrollReveal from "./ScrollReveal";
 
 const serviceIcons: Record<string, typeof LuTruck> = {
   truck: LuTruck,
@@ -23,14 +25,32 @@ const serviceIcons: Record<string, typeof LuTruck> = {
   "map-pin": LuMapPin,
 };
 
-export default function ServiceCard({ service }: { service: CourierServiceItem }) {
+export default function ServiceCard({
+  service,
+  index = 0,
+}: {
+  service: CourierServiceItem;
+  index?: number;
+}) {
   const Icon = serviceIcons[service.icon] ?? LuTruck;
 
   return (
-    <article className="relative flex flex-col h-full rounded-xl bg-white shadow-[0_12px_34px_rgba(11,27,77,0.09)] overflow-hidden">
+    <ScrollReveal
+      as="article"
+      direction="up"
+      index={index}
+      staggerChildren={0.1}
+      className="relative flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-[0_12px_34px_rgba(11,27,77,0.09)]"
+    >
       {/* Top Image Container */}
       <div className="relative h-[200px] w-full overflow-hidden">
-        <img src={service.image} alt={service.title} className="h-full w-full object-cover" />
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
+        />
       </div>
 
       {/* Content Body with Upward Curved Top */}
@@ -70,6 +90,6 @@ export default function ServiceCard({ service }: { service: CourierServiceItem }
           </Link>
         </div>
       </div>
-    </article>
+    </ScrollReveal>
   );
 }

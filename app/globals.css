@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 @utility font-teko {
   font-family: var(--font-teko);

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { LuMinus, LuPlus } from "react-icons/lu";
 import { site, type CourierFaqData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export default function CourierFaq1({
   data = site.faq,
@@ -11,20 +13,27 @@ export default function CourierFaq1({
   const [openId, setOpenId] = useState<number | null>(data.faqs[0]?.id ?? null);
 
   return (
-    <section className={`bg-[#F7FAFD] py-8 md:py-12 ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="right"
+      mobileDirection="up"
+      className={`bg-[#F7FAFD] py-8 md:py-12 ${className}`}
+    >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-14">
           {/* image */}
-          <div className="relative order-2 md:order-1">
-            <img
+          <ScrollReveal as="div" direction="left" mobileDirection="up" className="relative order-2 md:order-1">
+            <Image
               src={data.image.src}
               alt={data.image.alt}
+              width={800}
+              height={1000}
               className="relative h-[320px] w-full rounded-[18px]  object-cover shadow-xl sm:h-[420px] lg:h-[480px]"
             />
-          </div>
+          </ScrollReveal>
 
           {/* accordion */}
-          <div className="order-1 lg:order-2">
+          <ScrollReveal as="div" direction="right" mobileDirection="up" className="order-1 lg:order-2">
             <div className="flex items-center gap-2.5 text-[18px] font-bold uppercase tracking-[0.12em] text-[#fd5a02]">
               <span className="font-teko text-[18px]">{data.badge}</span>
               <span className="h-[2px] w-9 bg-[#f55804]" />
@@ -40,8 +49,12 @@ export default function CourierFaq1({
               {data.faqs.map((f) => {
                 const open = openId === f.id;
                 return (
-                  <div
+                  <ScrollReveal
                     key={f.id}
+                    as="div"
+                    direction="up"
+                    index={f.id}
+                    staggerChildren={0.06}
                     className={`rounded-md border transition-colors duration-300 ${
                       open
                         ? "border-[#F26A21]/50 bg-[#FFF6F0]"
@@ -72,13 +85,13 @@ export default function CourierFaq1({
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

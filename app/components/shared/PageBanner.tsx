@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import ScrollReveal from "./ScrollReveal";
 
 interface PageBannerProps {
   title: string;
@@ -24,10 +26,25 @@ export default function PageBanner({
   ];
 
   return (
-    <section className={`relative overflow-hidden ${className}`}>
-      <img src={backgroundImage} alt="" className="absolute inset-0 h-full w-full object-cover" />
+    <ScrollReveal
+      as="section"
+      direction="left"
+      mobileDirection="up"
+      className={`relative overflow-hidden ${className}`}
+    >
+      {backgroundImage && (
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          className="object-cover"
+        />
+      )}
       <div className="absolute inset-0 bg-[#0a2e46]/85"  />
-      <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center px-4 py-24 text-center sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+      <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center px-4 py-24 text-center sm:px-6 sm:py-24 lg:px-8 ">
         <h1 className="mt-3 text-[32px] font-bold leading-tight text-white sm:text-[44px] lg:text-[52px]">
           {title}
         </h1>
@@ -50,6 +67,6 @@ export default function PageBanner({
           ))}
         </nav>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

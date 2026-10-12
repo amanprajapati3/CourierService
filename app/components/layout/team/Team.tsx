@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { site, type CourierTeamData, type SectionProps } from "@/data";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const NAVY = "#0e1233";
 const ORANGE = "#F26A21";
@@ -11,7 +13,7 @@ export default function CourierTeam1({
   className = "",
 }: SectionProps<CourierTeamData>) {
   return (
-    <section className={`bg-[#F7FAFD] py-8 md:py-12 ${className}`}>
+    <ScrollReveal as="section" direction="up" mobileDirection="right" className={`bg-[#F7FAFD] py-8 md:py-12 ${className}`}>
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -34,18 +36,26 @@ export default function CourierTeam1({
 
         {/* Team Cards Grid */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {data.members.map((member) => (
-            <Link
+          {data.members.map((member, i) => (
+            <ScrollReveal
               key={member.id}
-              href={`/team/${member.slug}`}
-              className="group block rounded-2xl bg-white p-0 shadow-[0_10px_30px_rgba(11,27,77,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(11,27,77,0.12)]"
+              as="div"
+              direction="up"
+              index={i}
+              staggerChildren={0.08}
             >
+              <Link
+                href={`/team/${member.slug}`}
+                className="group block rounded-2xl bg-white p-0 shadow-[0_10px_30px_rgba(11,27,77,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(11,27,77,0.12)]"
+              >
               {/* Member Image Container */}
               <div className="relative h-[280px] w-full overflow-hidden rounded-lg bg-gray-100">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -62,11 +72,12 @@ export default function CourierTeam1({
                   style={{ backgroundColor: ORANGE }}
                 />
               </div>
-            </Link>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
 
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

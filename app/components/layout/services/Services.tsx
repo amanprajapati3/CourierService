@@ -1,4 +1,5 @@
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import ServiceCard from "../../shared/ServiceCard";
 import { site } from "@/data";
 
@@ -9,7 +10,7 @@ export default function Services() {
     <div className="bg-white">
       <PageBanner {...data.banner} />
 
-      <section className="bg-[#F7FAFD] py-12 md:py-16">
+      <ScrollReveal as="section" direction="right" mobileDirection="up" className="bg-[#F7FAFD] py-12 md:py-16">
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
           {/* Title Section */}
           <div className="text-center">
@@ -35,12 +36,12 @@ export default function Services() {
 
           {/* Service Cards */}
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {data.services.map((s) => (
-              <ServiceCard key={s.id} service={s} />
+            {data.services.map((s, i) => (
+              <ServiceCard key={s.id} service={s} index={i} />
             ))}
           </div>
         </div>
-      </section>
+      </ScrollReveal>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { LuChevronsRight, LuMail, LuMapPin, LuMessageSquare, LuPhone, LuUser } from "react-icons/lu";
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 import { site, type CourierContactData, type SectionProps } from "@/data";
 
 const infoIcons: Record<string, typeof LuMail> = {
@@ -16,16 +17,17 @@ export default function Contact({
   className = "",
 }: SectionProps<CourierContactData>) {
   const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
     <div className="bg-white">
       <PageBanner {...data.banner} />
 
       {/* Info cards */}
-      <section className={` py-8 md:py-12 ${className}`}>
+      <ScrollReveal as="section" direction="up" mobileDirection="left" className={`py-8 md:py-12 ${className}`}>
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6  sm:grid-cols-2 lg:grid-cols-3">
-            {data.infoCards.map((card) => {
+            {data.infoCards.map((card, i) => {
               const Icon = infoIcons[card.icon] ?? LuMail;
               const body = (
                 <>
@@ -50,24 +52,25 @@ export default function Contact({
                   {body}
                 </a>
               ) : (
+                <ScrollReveal key={card.id} as="div" direction="up" index={i} staggerChildren={0.1}>
                 <div
-                  key={card.id}
                   className="rounded-xl bg-[#eceeee] border border-gray-300 px-6 py-2 text-center shadow-[0_12px_34px_rgba(11,27,77,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(11,27,77,0.14)]"
                 >
                   {body}
                 </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </section>
+      </ScrollReveal>
 
       {/* Map + Form */}
-      <section className="bg-white py-8">
+      <ScrollReveal as="section" direction="left" mobileDirection="up" className="bg-white py-8">
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-12">
             {/* Map */}
-            <div className="order-2 md:order-1 md:col-span-6">
+            <ScrollReveal as="div" direction="left" mobileDirection="up" className="order-2 md:order-1 md:col-span-6">
               <iframe
                 title="Our location map"
                 src={data.mapEmbedUrl}
@@ -75,10 +78,10 @@ export default function Contact({
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-[360px] w-full rounded-2xl border-0 shadow-[0_12px_34px_rgba(11,27,77,0.1)] md:h-full md:min-h-[560px]"
               />
-            </div>
+            </ScrollReveal>
 
             {/* Form */}
-            <div className="order-1 md:order-2 md:col-span-6">
+            <ScrollReveal as="div" direction="right" mobileDirection="up" className="order-1 md:order-2 md:col-span-6">
               <div className="mb-4 ">
                 <div className="flex items-center  gap-2.5 text-[14px] font-bold uppercase tracking-[0.12em] text-[#F26A21]">
                   <span className="font-teko text-[18px]">{data.formHeader.badge}</span>
@@ -95,8 +98,10 @@ export default function Contact({
                 </p>
               </div>
               <form
+                ref={formRef}
                 onSubmit={(e) => {
                   e.preventDefault();
+                  formRef.current?.reset();
                   setSubmitted(true);
                 }}
                 className=""
@@ -197,10 +202,10 @@ export default function Contact({
                   </p>
                 )}
               </form>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
-      </section>
+      </ScrollReveal>
     </div>
   );
 }

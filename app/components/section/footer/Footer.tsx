@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaPinterestP, FaInstagram } from "react-icons/fa";
 import type { ReactNode } from "react";
 import { site, type CourierFooterData, type SectionProps } from "@/data"; // adjust path
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const NAVY = "#0B1B4D";
 const ORANGE = "#F26A21";
@@ -26,7 +28,9 @@ export default function CourierFooter1({
   className = "",
 }: SectionProps<CourierFooterData>) {
   return (
-    <footer
+    <ScrollReveal
+      as="footer"
+      direction="up"
       className={`relative overflow-hidden text-white ${className}`}
       style={{
         backgroundImage: `url(${data.footerImage})`,
@@ -43,9 +47,11 @@ export default function CourierFooter1({
           {/* Brand */}
           <div className=" md:-mt-6">
             <Link href="/" className="inline-block">
-              <img
+              <Image
                 src="/footerlogo.png"
                 alt={data.logoAlt}
+                width={220}
+                height={80}
                 className="h-16 w-auto sm:h-20 lg:h-28"
               />
             </Link>
@@ -153,6 +159,6 @@ export default function CourierFooter1({
           {data.copyright.suffix}
         </p>
       </div>
-    </footer>
+    </ScrollReveal>
   );
 }

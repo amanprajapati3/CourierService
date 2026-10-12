@@ -5,6 +5,7 @@ import {
   ReactNode,
   useSyncExternalStore,
   type ElementType,
+  type Ref,
 } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
@@ -45,6 +46,7 @@ function useIsDesktopLayout() {
 type RevealElementProps = {
   "data-reveal"?: string;
   className?: string;
+  ref?: Ref<HTMLElement>;
   style?: CSSProperties;
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
@@ -123,6 +125,7 @@ interface ScrollRevealProps {
   distance?: number;
   once?: boolean;
   className?: string;
+  ref?: Ref<HTMLElement>;
   style?: CSSProperties;
   /** Seconds added per `index` step to `delay`, for cascading card grids. */
   staggerChildren?: number;
@@ -144,6 +147,7 @@ export default function ScrollReveal({
   distance = 60,
   once = true,
   className,
+  ref,
   style,
   staggerChildren,
   index,
@@ -176,6 +180,7 @@ export default function ScrollReveal({
     <Component
       data-reveal=""
       className={className}
+      ref={ref}
       style={{
         ...style,
         transitionProperty:

@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { site, type CourierTestimonialData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export default function CourierTestimonial1({
   data = site.testimonial,
@@ -25,17 +27,24 @@ export default function CourierTestimonial1({
   }, [paused, total]);
 
   return (
-    <section className={`relative overflow-hidden  bg-[#F4F8FC] ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="left"
+      mobileDirection="up"
+      className={`relative overflow-hidden bg-[#F4F8FC] ${className}`}
+    >
       {/* slanted truck image, right side on desktop */}
       <div className="absolute  inset-y-0 right-0 hidden w-[46%] lg:block">
         <div
           className="absolute hidden lg:block inset-0 bg-[#F26A21]"
           style={{ clipPath: "polygon(14% 0, 100% 0, 100% 100%, 0 100%)" }}
         />
-        <img
+        <Image
           src={data.image.src}
           alt={data.image.alt}
-          className="absolute inset-0 hidden lg:block  h-full w-full object-cover"
+          fill
+          sizes="46vw"
+          className="hidden lg:block  object-cover"
           style={{ clipPath: "polygon(17% 0, 100% 0, 100% 100%, 1% 100%)" }}
         />
       </div>
@@ -95,9 +104,11 @@ export default function CourierTestimonial1({
                   <div key={i} className="w-full shrink-0 p-5 sm:p-6">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3">
-                        <img
+                        <Image
                           src={t.image}
                           alt={t.name}
+                          width={80}
+                          height={80}
                           className="h-20 w-20 rounded-full border border-[#F26A21] object-cover"
                         />
                         <div>
@@ -148,13 +159,15 @@ export default function CourierTestimonial1({
           className="absolute inset-0 bg-[#F26A21]"
           style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0 100%)" }}
         />
-        <img
+        <Image
           src={data.image.src}
           alt={data.image.alt}
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
           style={{ clipPath: "polygon(0 16%, 100% 4%, 100% 100%, 0 100%)" }}
         />
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

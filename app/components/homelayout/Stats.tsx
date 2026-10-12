@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuGlobe, LuPackageCheck, LuSmile, LuUsers } from "react-icons/lu";
 import { site, type CourierStatsData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // one icon per stat card, in the same order as data.items
 const statIcons = [LuGlobe, LuUsers, LuSmile, LuPackageCheck];
@@ -41,8 +42,11 @@ export default function CourierStats1({
   }, []);
 
   return (
-    <section
+    <ScrollReveal
+      as="section"
       ref={ref}
+      direction="up"
+      mobileDirection="right"
       className={`relative overflow-hidden my-8 md:my-12 py-12 md:py-20 lg:py-24 ${className}`}
       style={{
         backgroundImage: `url(${data.bgImage})`,
@@ -56,8 +60,12 @@ export default function CourierStats1({
           {data.items.map((s, i) => {
             const Icon = statIcons[i];
             return (
-              <div
+              <ScrollReveal
                 key={s.id}
+                as="div"
+                direction="up"
+                index={i}
+                staggerChildren={0.12}
                 className="relative rounded-md border-l-[3px] border-[#F26A21] bg-white px-4 pb-7 pt-[58px] text-center shadow-[0_14px_36px_rgba(11,27,77,0.1)]"
               >
                 {/* semi-circle notch icon */}
@@ -78,11 +86,11 @@ export default function CourierStats1({
                 </div>
                 <p className="mt-3 text-[16px] text-[#1f2127]">{s.label}</p>
                 <span className="mx-auto mt-4 block h-[3px] w-8 rounded-full bg-[#F26A21]" />
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

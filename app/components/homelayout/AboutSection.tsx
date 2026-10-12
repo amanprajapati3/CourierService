@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { LuArrowRight, LuGlobe, LuPackage } from "react-icons/lu";
 import { site, type CourierAboutData, type SectionProps } from "@/data";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // one icon per feature card, in the same order as data.features
 const featureIcons = [LuGlobe, LuPackage];
@@ -42,19 +44,29 @@ export default function CourierAbout1({
   }, [data.experienceBadge.number]);
 
   return (
-    <section className={`bg-white py-8 md:py-12 ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="up"
+      mobileDirection="left"
+      className={`bg-white py-8 md:pb-12 md:pt-16 ${className}`}
+    >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* images */}
-          <div
-            ref={ref}
+          <ScrollReveal
+            as="div"
+            direction="left"
+            mobileDirection="up"
             className="relative mx-auto h-[420px] w-full max-w-[560px] sm:h-[520px] lg:h-[580px]"
+            ref={ref}
           >
             <span className="absolute -left-3 top-0 h-full w-[8px] rounded-full bg-[#F26A21]" />
 
-            <img
+            <Image
               src={data.image.src}
               alt={data.image.alt}
+              width={800}
+              height={1200}
               className="absolute left-0 top-0 h-full w-[54%] rounded-sm object-cover shadow-lg"
             />
 
@@ -71,15 +83,17 @@ export default function CourierAbout1({
               </p>
             </div>
 
-            <img
+            <Image
               src={data.secondaryImage.src}
               alt={data.secondaryImage.alt}
+              width={800}
+              height={800}
               className="absolute bottom-0 right-0 sm:-right-9 sm:h-[73%] h-[62%] w-[50%] rounded-lg object-cover shadow-xl"
             />
-          </div>
+          </ScrollReveal>
 
           {/* content */}
-          <div>
+          <ScrollReveal as="div" direction="right" mobileDirection="up">
             <div className="flex items-center gap-2.5 text-[18px] font-bold uppercase tracking-[0.12em] text-[#F26A21]">
               <span className="font-teko text-[18px]">{data.badge}</span>
               <span className="h-[2px] w-9 bg-[#F26A21]" />
@@ -124,9 +138,9 @@ export default function CourierAbout1({
               {data.button.label}
               <LuArrowRight size={16} />
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { LuMinus, LuPlus } from "react-icons/lu";
 import { IoIosAirplane } from "react-icons/io";
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 import { site, type CourierFaqPageData, type SectionProps } from "@/data";
 
@@ -17,7 +19,7 @@ export default function Faq({
     <div className="bg-white">
       <PageBanner {...data.banner} />
 
-      <section className={`bg-white py-8 md:py-12 ${className}`}>
+      <ScrollReveal as="section" direction="right" mobileDirection="up" className={`bg-white py-8 md:py-12 ${className}`}>
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-10 text-center">
@@ -39,12 +41,14 @@ export default function Faq({
 
           <div className="grid items-stretch gap-8 md:grid-cols-12">
             {/* Left column: help card with background image */}
-            <div className="order-2 md:order-1 md:col-span-5">
+            <ScrollReveal as="div" direction="left" mobileDirection="up" className="order-2 md:order-1 md:col-span-5">
               <div className="relative h-full min-h-[380px] overflow-hidden rounded-2xl shadow-[0_18px_45px_rgba(11,27,77,0.18)]">
-                <img
+                <Image
                   src={data.leftCard.bgImage}
                   alt={data.leftCard.title}
-                  className="absolute inset-0 h-full w-full object-center"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-center"
                 />
 
                 <div className="absolute top-0 flex h-full flex-col justify-start p-8 sm:p-10">
@@ -57,16 +61,20 @@ export default function Faq({
                   <p className="text-white pt-2 pl-2 max-w-xs">{data.leftCard.paragraph}</p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right column: accordion */}
-            <div className="order-1 md:order-2 md:col-span-7">
+            <ScrollReveal as="div" direction="right" mobileDirection="up" className="order-1 md:order-2 md:col-span-7">
               <div className="space-y-3">
-                {data.faqs.map((f) => {
+                {data.faqs.map((f, i) => {
                   const open = openId === f.id;
                   return (
-                    <div
+                    <ScrollReveal
                       key={f.id}
+                      as="div"
+                      direction="up"
+                      index={i}
+                      staggerChildren={0.06}
                       className={`overflow-hidden rounded-xl border transition-colors duration-300 ${
                         open
                           ? "border-[#F26A21]/50 bg-[#ffead7] shadow-[0_12px_30px_rgba(242,106,33,0.12)]"
@@ -110,14 +118,14 @@ export default function Faq({
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
-      </section>
+      </ScrollReveal>
     </div>
   );
 }

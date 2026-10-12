@@ -1,6 +1,8 @@
 import { Check } from "lucide-react";
+import Image from "next/image";
 import type { CourierTeamMember } from "@/data";
 import PageBanner from "@/app/components/shared/PageBanner";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import { site } from "@/data";
 
 const responsibilities = [
@@ -36,20 +38,22 @@ export default function TeamDetail({ member }: TeamDetailProps) {
         ]}
       />
 
-      <main className="bg-[#f7f9fc] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <ScrollReveal as="main" direction="left" mobileDirection="up" className="bg-[#f7f9fc] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <article className="mx-auto max-w-[1320px] bg-white px-4 py-6 sm:px-7 sm:py-8 lg:px-10 lg:py-10">
           <div className="grid grid-cols-1 items-stretch gap-7 lg:grid-cols-2 lg:gap-10">
             {/* Person Image */}
-            <div className="relative overflow-hidden rounded-xl bg-gray-100">
-              <img
+            <ScrollReveal as="div" direction="left" mobileDirection="up" className="relative overflow-hidden rounded-xl bg-gray-100">
+              <Image
                 src={member.image}
                 alt={member.name}
+                width={800}
+                height={1000}
                 className="aspect-[4/5] h-full w-full object-cover object-top lg:aspect-auto"
               />
-            </div>
+            </ScrollReveal>
 
             {/* Person Details */}
-            <div className="flex flex-col">
+            <ScrollReveal as="div" direction="right" mobileDirection="up" className="flex flex-col">
               {/* Name - shown below image on mobile/tablet, top of right column on desktop */}
               <h2 className="text-center text-3xl font-extrabold leading-tight text-[#0b1b4d] sm:text-4xl lg:text-left lg:text-[42px]">
                 {member.name}
@@ -79,10 +83,10 @@ export default function TeamDetail({ member }: TeamDetailProps) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           </div>
         </article>
-      </main>
+      </ScrollReveal>
     </>
   );
 }

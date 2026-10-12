@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { site, type CourierServicesData, type SectionProps } from "@/data";
 import ServiceCard from "../shared/ServiceCard";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export default function CourierServices1({
   data = site.services,
@@ -39,7 +40,12 @@ export default function CourierServices1({
   }, [max, paused, next]);
 
   return (
-    <section className={`bg-[#F7FAFD] py-12 md:py-16 ${className}`}>
+    <ScrollReveal
+      as="section"
+      direction="right"
+      mobileDirection="up"
+      className={`bg-[#F7FAFD] py-12 md:py-16 ${className}`}
+    >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -83,14 +89,14 @@ export default function CourierServices1({
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${active * (100 / perView)}%)` }}
           >
-            {items.map((s) => (
+            {items.map((s, i) => (
               <div key={s.id} className="px-3" style={{ flex: `0 0 ${100 / perView}%` }}>
-                <ServiceCard service={s} />
+                <ServiceCard service={s} index={i} />
               </div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

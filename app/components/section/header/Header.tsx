@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Clock, Mail, Menu, Phone, Send, X } from "lucide-react";
 import {
@@ -114,9 +115,11 @@ export default function CourierHeader1({
           <div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:h-[80px] lg:px-8">
             {/* Logo */}
             <Link href="/" className="shrink-0">
-              <img
+              <Image
                 src={data.site.logo.normal}
                 alt={data.site.logo.alt}
+                width={220}
+                height={80}
                 className="h-16 w-auto sm:h-20 lg:h-24 pt-2"
               />
             </Link>
@@ -179,9 +182,11 @@ export default function CourierHeader1({
       >
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <Link href="/" onClick={() => setOpen(false)}>
-            <img
+            <Image
               src={data.site.logo.normal}
               alt={data.site.logo.alt}
+              width={220}
+              height={80}
               className="h-16 w-auto"
             />
           </Link>

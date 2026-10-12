@@ -1,6 +1,8 @@
 import { Check, Plane, Truck } from "lucide-react";
+import Image from "next/image";
 import type { CourierServiceItem } from "@/data";
 import PageBanner from "@/app/components/shared/PageBanner";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import { site } from "@/data";
 
 const roadFeatures = [
@@ -53,12 +55,14 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         ]}
       />
 
-      <main className="bg-[#f7f9fc] px-0 py-3 sm:px-0 sm:py-4 lg:px-8">
+      <ScrollReveal as="main" direction="right" mobileDirection="up" className="bg-[#f7f9fc] px-0 py-3 sm:px-0 sm:py-4 lg:px-8">
         <article className="mx-auto max-w-[1320px] bg-white px-4 py-4 sm:px-7 sm:py-6 lg:px-10 lg:py-7">
           <div className="relative overflow-hidden rounded-lg">
-            <img
+            <Image
               src={service.image}
               alt={`${service.title} freight transportation`}
+              width={1200}
+              height={775}
               className="aspect-[1.55/1] w-full object-cover sm:aspect-[2.15/1]"
             />
             <div className="absolute hidden lg:block bottom-5 left-4 sm:bottom-8 sm:left-8">
@@ -87,7 +91,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             </div>
           </div>
 
-          <section className="px-1 pb-7 pt-7 sm:px-4 sm:pb-9 sm:pt-8 lg:px-7">
+          <ScrollReveal as="section" direction="left" mobileDirection="up" className="px-1 pb-7 pt-7 sm:px-4 sm:pb-9 sm:pt-8 lg:px-7">
             <div className="flex items-center gap-2 text-[13px] font-bold uppercase tracking-wide text-[#f04b16] sm:text-lg">
               <span className="font-teko text-[18px]">Our Service</span>
               <Plane size={28} fill="currentColor" />
@@ -103,15 +107,17 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             <p className="mt-5 text-base leading-[1.7] text-[#737f91] sm:text-lg lg:text-xl">
               {secondParagraph}
             </p>
-          </section>
+          </ScrollReveal>
 
-          <section className="grid items-center gap-7 px-1 pb-2 sm:px-2 lg:grid-cols-2 lg:gap-8">
-            <img
-              src={isRoadFreight ? "/courier/img7.png" : service.image}
+          <ScrollReveal as="section" direction="up" className="grid items-center gap-7 px-1 pb-2 sm:px-2 lg:grid-cols-2 lg:gap-8">
+            <Image
+              src={isRoadFreight ? "/courier2/img7.webp" : service.image}
               alt={`${service.title} delivery in transit`}
+              width={800}
+              height={600}
               className="h-full min-h-[260px] max-h-[470px] w-full rounded-xl object-cover"
             />
-            <div className="py-2">
+            <ScrollReveal as="div" direction="right" mobileDirection="up" className="py-2">
               <h3 className="flex items-start gap-4 text-2xl font-bold leading-tight text-[#0b1b4d] sm:text-3xl">
                 <span className="mt-3 h-1.5 w-6 shrink-0 rounded-sm bg-[#f04b16]" />
                 Reliable {title} Transportation
@@ -132,10 +138,10 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </section>
+            </ScrollReveal>
+          </ScrollReveal>
         </article>
-      </main>
+      </ScrollReveal>
     </>
   );
 }

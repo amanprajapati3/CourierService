@@ -79,7 +79,7 @@
               { "id": 3, "icon": "globe", "title": "Global Coverage" }
             ],
             "image": {
-              "src": "/courier/img6.png",
+              "src": "/courier2/img3.webp",
               "alt": "Caurier delivery man beside a delivery van with an airplane flying above"
             }
           }
@@ -95,11 +95,11 @@
             },
             "paragraph": "Caurier is a reliable logistics and transportation company dedicated to delivering safe, fast, and efficient shipping solutions across domestic and international destinations. With a customer-first approach and years of industry experience, we ensure your goods reach their destination on time, every time.",
             "image": {
-              "src": "/courier/img7.png",
+              "src": "/courier2/img6.webp",
               "alt": "Cargo truck on a highway at sunset"
             },
             "secondaryImage": {
-              "src": "/courier/img4.png",
+              "src": "/courier2/img4.webp",
               "alt": "Container ship with an airplane flying overhead"
             },
             "experienceBadge": {
@@ -136,7 +136,7 @@
             "banner": {
               "title": "Services",
               "currentPage": "Services",
-              "backgroundImage": "/courier/img5.png"
+              "backgroundImage": "/courier2/img3.webp"
             },
             "pageIntro": {
               "badge": "OUR SERVICE",
@@ -158,7 +158,7 @@
                 "id": 1,
                 "slug": "road-freight",
                 "icon": "truck",
-                "image": "/courier/img1.png",
+                "image": "/courier2/img1.webp",
                 "title": "Road Freight",
                 "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -167,7 +167,7 @@
                 "id": 2,
                 "slug": "ocean-freight",
                 "icon": "ship",
-                "image": "/courier/img2.png",
+                "image": "/courier2/img2.webp",
                 "title": "Ocean Freight",
                 "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -176,7 +176,7 @@
                 "id": 3,
                 "slug": "air-freight",
                 "icon": "plane",
-                "image": "/courier/img5.png",
+                "image": "/courier2/img5.webp",
                 "title": "Air Freight",
                 "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -185,7 +185,7 @@
                 "id": 4,
                 "slug": "railway-freight",
                 "icon": "train-front",
-                "image": "/courier/img8.png",
+                "image": "/courier2/img8.webp",
                 "title": "Railway Freight",
                 "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -194,7 +194,7 @@
                 "id": 5,
                 "slug": "warehousing",
                 "icon": "warehouse",
-                "image": "/courier/img10.png",
+                "image": "/courier2/img10.webp",
                 "title": "Warehousing",
                 "description": "We offer secure storage and efficient inventory management solutions to keep your goods organized and ready for delivery.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -203,7 +203,7 @@
                 "id": 6,
                 "slug": "packaging-solutions",
                 "icon": "package",
-                "image": "/courier/img4.png",
+                "image": "/courier2/img4.webp",
                 "title": "Packaging Solutions",
                 "description": "Our reliable packaging services help protect your shipments during transit and ensure they arrive safely at their destination.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -212,7 +212,7 @@
                 "id": 7,
                 "slug": "customs-clearance",
                 "icon": "clipboard-check",
-                "image": "/courier/img6.png",
+                "image": "/courier2/img6.webp",
                 "title": "Customs Clearance",
                 "description": "We simplify international shipping with dependable customs documentation and clearance support for smooth cross-border delivery.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -221,7 +221,7 @@
                 "id": 8,
                 "slug": "last-mile-delivery",
                 "icon": "map-pin",
-                "image": "/courier/img7.png",
+                "image": "/courier2/img7.webp",
                 "title": "Last-Mile Delivery",
                 "description": "We provide dependable last-mile delivery services to get packages from distribution centers directly to your customers.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -240,7 +240,7 @@
             },
             "desc": "We are proud to have earned the trust of businesses worldwide. Here's what our valued clients say about their experience with our logistics services.",
             "image": {
-              "src": "/courier/img6.png",
+              "src": "/courier2/img6.webp",
               "alt": "Cargo truck at a container port with cranes in the background"
             },
             "testimonialItems": [
@@ -281,7 +281,7 @@
       "Stats": {
         "variants": {
           "CourierStats1": {
-            "bgImage": "/statsbgimage.png",
+            "bgImage": "/courier2/statsbgimage.png",
             "items": [
               {
                 "id": 1,
@@ -351,7 +351,7 @@
               }
             ],
             "image": {
-              "src": "/courier/img11.png",
+              "src": "/courier2/img11.webp",
               "alt": "Cargo truck at a container port with an airplane flying overhead"
             }
           }
@@ -374,19 +374,24 @@
               },
               {
                 "id": 2,
-                "question": "What Is Last-Mile Delivery And Why Is It Important?"
+                "question": "What Is Last-Mile Delivery And Why Is It Important?",
+                "answer": "In the rare case of a delay or loss, our team immediately investigates the issue and provides real-time updates. We have insurance coverage and proper handling procedures to ensure your goods are safe and secured."
+
               },
               {
                 "id": 3,
-                "question": "How Can I Reduce My Transportation Costs?"
+                "question": "How Can I Reduce My Transportation Costs?",
+                "answer": "In the rare case of a delay or loss, our team immediately investigates the issue and provides real-time updates. We have insurance coverage and proper handling procedures to ensure your goods are safe and secured."
+                
               },
               {
                 "id": 4,
-                "question": "How Do You Ensure The Safety And Security Of Goods In Transit?"
+                "question": "How Do You Ensure The Safety And Security Of Goods In Transit?",
+                "answer": "In the rare case of a delay or loss, our team immediately investigates the issue and provides real-time updates. We have insurance coverage and proper handling procedures to ensure your goods are safe and secured."
               }
             ],
             "image": {
-              "src": "/courier/img4.png",
+              "src": "/courier2/img4.webp",
               "alt": "Worker in a safety helmet holding a clipboard in front of shipping containers"
             }
           }
@@ -398,7 +403,7 @@
             "banner": {
               "title": "Faq",
               "currentPage": "Faq",
-              "backgroundImage": "/courier/img5.png"
+              "backgroundImage": "/courier2/img5.webp"
             },
             "badge": "FAQ",
             "title": {
@@ -410,7 +415,7 @@
               "subtitle": "HAVE ANY QUESTIONS?",
               "title": "We're Here To Help You",
               "paragraph": "Find quick answer to common questions, about our freight and logistic services.",
-              "bgImage": "/courier/img12.png"
+              "bgImage": "/courier2/img12.webp"
             },
             "faqs": [
               {
@@ -473,7 +478,7 @@
             "banner": {
               "title": "Contact",
               "currentPage": "Contact",
-              "backgroundImage": "/courier/img5.png"
+              "backgroundImage": "/courier2/img5.webp"
             },
             "infoCards": [
               {
@@ -524,7 +529,7 @@
             "banner": {
               "title": "Blog",
               "currentPage": "Blog",
-              "backgroundImage": "/courier/img5.png"
+              "backgroundImage": "/courier2/img5.webp"
             },
             "badge": "BLOG & NEWS",
             "title": {
@@ -536,7 +541,7 @@
               {
                 "id": 1,
                 "slug": "importance-of-on-time-delivery-in-business-growth",
-                "image": "/courier/img7.png",
+                "image": "/courier2/img7.webp",
                 "day": "20",
                 "month": "Jun",
                 "author": "Admin",
@@ -548,7 +553,7 @@
               {
                 "id": 2,
                 "slug": "challenges-and-opportunities-in-modern-supply-chains",
-                "image": "/courier/img9.png",
+                "image": "/courier2/img9.webp",
                 "day": "22",
                 "month": "Aug",
                 "author": "Admin",
@@ -560,7 +565,7 @@
               {
                 "id": 3,
                 "slug": "sustainable-transportation-going-green-in-logistics",
-                "image": "/courier/img12.png",
+                "image": "/courier2/img12.webp",
                 "day": "17",
                 "month": "Jan",
                 "author": "Admin",
@@ -572,7 +577,7 @@
               {
                 "id": 4,
                 "slug": "how-technology-is-transforming-last-mile-delivery",
-                "image": "/courier/img1.png",
+                "image": "/courier2/img1.webp",
                 "day": "05",
                 "month": "Feb",
                 "author": "Admin",
@@ -584,7 +589,7 @@
               {
                 "id": 5,
                 "slug": "top-tips-to-reduce-your-shipping-costs",
-                "image": "/courier/img2.png",
+                "image": "/courier2/img2.webp",
                 "day": "12",
                 "month": "Mar",
                 "author": "Admin",
@@ -596,7 +601,7 @@
               {
                 "id": 6,
                 "slug": "warehouse-management-best-practices-for-growing-businesses",
-                "image": "/courier/img10.png",
+                "image": "/courier2/img10.webp",
                 "day": "28",
                 "month": "Apr",
                 "author": "Admin",
@@ -608,7 +613,7 @@
               {
                 "id": 7,
                 "slug": "air-freight-vs-ocean-freight-which-is-right-for-you",
-                "image": "/courier/img5.png",
+                "image": "/courier2/img5.webp",
                 "day": "09",
                 "month": "May",
                 "author": "Admin",
@@ -620,7 +625,7 @@
               {
                 "id": 8,
                 "slug": "the-role-of-warehousing-in-a-smooth-supply-chain",
-                "image": "/courier/img11.png",
+                "image": "/courier2/img11.webp",
                 "day": "14",
                 "month": "Jun",
                 "author": "Admin",
@@ -632,7 +637,7 @@
               {
                 "id": 9,
                 "slug": "customs-clearance-explained-for-first-time-exporters",
-                "image": "/courier/img6.png",
+                "image": "/courier2/img6.webp",
                 "day": "21",
                 "month": "Jul",
                 "author": "Admin",
@@ -644,7 +649,7 @@
               {
                 "id": 10,
                 "slug": "why-real-time-tracking-matters-for-your-shipments",
-                "image": "/courier/img8.png",
+                "image": "/courier2/img8.webp",
                 "day": "03",
                 "month": "Aug",
                 "author": "Admin",
@@ -656,7 +661,7 @@
               {
                 "id": 11,
                 "slug": "packaging-do-and-donts-for-safe-delivery",
-                "image": "/courier/img4.png",
+                "image": "/courier2/img4.webp",
                 "day": "18",
                 "month": "Sep",
                 "author": "Admin",
@@ -668,7 +673,7 @@
               {
                 "id": 12,
                 "slug": "building-a-resilient-supply-chain-in-uncertain-times",
-                "image": "/courier/img12.png",
+                "image": "/courier2/img12.webp",
                 "day": "27",
                 "month": "Oct",
                 "author": "Admin",
@@ -680,7 +685,7 @@
               {
                 "id": 13,
                 "slug": "railway-freight-a-cost-effective-way-to-move-goods",
-                "image": "/courier/img9.png",
+                "image": "/courier2/img9.webp",
                 "day": "06",
                 "month": "Nov",
                 "author": "Admin",
@@ -692,7 +697,7 @@
               {
                 "id": 14,
                 "slug": "customer-experience-the-key-to-logistics-success",
-                "image": "/courier/img7.png",
+                "image": "/courier2/img7.webp",
                 "day": "15",
                 "month": "Dec",
                 "author": "Admin",
@@ -704,7 +709,7 @@
               {
                 "id": 15,
                 "slug": "future-trends-every-logistics-business-should-watch",
-                "image": "/courier/img11.png",
+                "image": "/courier2/img11.webp",
                 "day": "29",
                 "month": "Dec",
                 "author": "Admin",
@@ -726,7 +731,7 @@
         "variants": {
           "CourierFooter1": {
             "logoImage": "/footerlogo.png",
-            "footerImage": "/courier/img10.png",
+            "footerImage": "/courier2/img10.webp",
             "logoAlt": "Caurier",
             "siteName": "Caurier",
             "desc": "Caurier is your trusted courier partner delivering parcels safely, on time and everywhere. Domestic & international shipping solutions for individuals and businesses.",
@@ -805,7 +810,7 @@
             "banner": {
               "title": "About Us",
               "currentPage": "About Us",
-              "backgroundImage": "/courier/img5.png"
+              "backgroundImage": "/courier2/img5.webp"
             },
             "badge": "About Us",
             "title": {
@@ -822,8 +827,8 @@
               "number": "30+",
               "label": "Years Of Experience"
             },
-            "mainImage": "/courier/img8.png",
-            "circularImage": "/courier/img9.png"
+            "mainImage": "/courier2/img8.webp",
+            "circularImage": "/courier2/img9.webp"
           }
         }
       },

@@ -1,4 +1,6 @@
 import PageBanner from "../../shared/PageBanner";
+import ScrollReveal from "../../shared/ScrollReveal";
+import Image from "next/image";
 import { site } from "@/data";
 
 const NAVY = "#0B1B4D";
@@ -13,12 +15,17 @@ export default function About() {
       <PageBanner {...data.banner} />
 
       {/* Main About Section */}
-      <section className="py-8 md:py-12 overflow-hidden">
+      <ScrollReveal as="section" direction="up" mobileDirection="left" className="py-8 md:py-12 overflow-hidden">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 ">
             
             {/* Left Side: Image Composition with Orange Framing & Overlays */}
-            <div className="lg:col-span-6  relative lg:max-w-[580px]">
+            <ScrollReveal
+              as="div"
+              direction="left"
+              mobileDirection="up"
+              className="lg:col-span-6 relative lg:max-w-[580px]"
+            >
               <div className="relative pl-6 pt-6 pb-6 mr-2  ">
                 
                 {/* Orange Left Border Accent Frame */}
@@ -35,10 +42,12 @@ export default function About() {
                 </div>
                 {/* Main Driver / Warehouse Image */}
                 <div className="relative p-2 shadow-xl rounded-2xl overflow-hidden  h-[380px] sm:h-[490px] w-full">
-                  <img
+                  <Image
                     src={data.mainImage}
                     alt="Courier delivery service"
-                    className="h-full rounded-2xl w-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="rounded-2xl object-cover"
                   />
                 </div>
 
@@ -54,18 +63,25 @@ export default function About() {
 
                 {/* Bottom-Right Overlapping Circular Badge */}
                 <div className="absolute -bottom-8 right-2  lg:-right-10 h-[150px] w-[150px] sm:h-[180px] sm:w-[180px] rounded-full border-[6px] border-white shadow-[0_15px_40px_rgba(11,27,77,0.2)] overflow-hidden z-20 bg-white">
-                  <img
+                  <Image
                     src={data.circularImage}
                     alt="Logistics transport"
-                    className="h-full w-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="180px"
+                    className="object-cover transform hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right Side: Content & Typography */}
-            <div className="lg:col-span-6 mt-6   lg:mt-6">
+            <ScrollReveal
+              as="div"
+              direction="right"
+              mobileDirection="up"
+              className="lg:col-span-6 mt-6 lg:mt-6"
+            >
               
               {/* Badge */}
               <div className="flex items-center gap-2.5 text-[14px] font-bold uppercase tracking-[0.12em] text-orange-600">
@@ -89,11 +105,11 @@ export default function About() {
                 ))}
               </div>
 
-            </div>
+            </ScrollReveal>
 
           </div>
         </div>
-      </section>
+      </ScrollReveal>
     </div>
   );
 }
