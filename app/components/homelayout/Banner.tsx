@@ -52,7 +52,7 @@ export default function CourierBanner1({
             {data.desc}
           </ScrollReveal>
 
-          <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+          <div className="mt-8 md:mt-20 flex flex-wrap gap-3 sm:gap-4">
             {data.highlights.map((h, i) => {
               const Icon = highlightIcons[i];
               return (
