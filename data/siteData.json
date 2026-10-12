@@ -176,7 +176,7 @@
                 "id": 3,
                 "slug": "air-freight",
                 "icon": "plane",
-                "image": "/courier2/img5.webp",
+                "image": "/courier2/img10.webp",
                 "title": "Air Freight",
                 "description": "We provide comprehensive transportation solutions designed to move your goods safely, efficiently, and on time.",
                 "button": { "label": "Read More", "href": "/services" }
@@ -613,7 +613,7 @@
               {
                 "id": 7,
                 "slug": "air-freight-vs-ocean-freight-which-is-right-for-you",
-                "image": "/courier2/img5.webp",
+                "image": "/courier2/img10.webp",
                 "day": "09",
                 "month": "May",
                 "author": "Admin",
@@ -756,12 +756,12 @@
               {
                 "title": "Our Services",
                 "links": [
-                  { "label": "Road Freight", "href": "/services" },
-                  { "label": "Ocean Freight", "href": "/services" },
-                  { "label": "Air Freight", "href": "/services" },
-                  { "label": "Railway Freight", "href": "/services" },
-                  { "label": "Bus Freight", "href": "/services" },
-                  { "label": "Hand Delivery", "href": "/services" }
+                  { "label": "Road Freight", "href": "/services/road-freight" },
+                  { "label": "Ocean Freight", "href": "/services/ocean-freight" },
+                  { "label": "Air Freight", "href": "/services/air-freight" },
+                  { "label": "Railway Freight", "href": "/services/railway-freight" },
+                  { "label": "WareHousing", "href": "/services/warehousing" },
+                  { "label": "Packaging Solution", "href": "/services/packaging-solutions" }
                 ]
               }
             ],
