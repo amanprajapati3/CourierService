@@ -48,7 +48,7 @@ export default function CourierAbout1({
       as="section"
       direction="up"
       mobileDirection="left"
-      className={`bg-white py-8 md:pb-12 md:pt-16 ${className}`}
+      className={`bg-white pb-8 md:pb-12  ${className}`}
     >
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
