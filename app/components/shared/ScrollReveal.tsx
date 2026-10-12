@@ -29,9 +29,15 @@ function getDesktopLayout() {
   return window.matchMedia(DESKTOP_MEDIA).matches;
 }
 
-/** Server render assumes the widest layout so desktop never flashes. */
+/**
+ * Server render assumes the mobile-safe (vertical) layout. Rendering the
+ * desktop horizontal transforms first would slide whole sections past the
+ * viewport on phones and clip them until a resize re-runs the media query.
+ * The vertical offset is applied while the content is still invisible, so the
+ * switch to desktop directions after hydration is not perceptible.
+ */
 function getServerDesktopLayout() {
-  return true;
+  return false;
 }
 
 function useIsDesktopLayout() {
@@ -160,8 +166,17 @@ export default function ScrollReveal({
   const isDesktopLayout = useIsDesktopLayout();
 
   const reduceMotion = Boolean(prefersReducedMotion);
-  const activeDirection =
+  const requestedDirection =
     mobileDirection && !isDesktopLayout ? mobileDirection : direction;
+
+  // Horizontal reveals slide content past the viewport edges, which breaks the
+  // layout and alignment once the sections stack on phones. Keep mobile purely
+  // vertical regardless of the requested direction.
+  const activeDirection: RevealDirection =
+    !isDesktopLayout &&
+    (requestedDirection === "left" || requestedDirection === "right")
+      ? "up"
+      : requestedDirection;
 
   const variants = buildVariants(activeDirection, distance, reduceMotion);
 
