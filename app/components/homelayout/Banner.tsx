@@ -11,12 +11,7 @@ export default function CourierBanner1({
   className = "",
 }: SectionProps<CourierBannerData>) {
   return (
-    <ScrollReveal
-      as="section"
-      direction="left"
-      mobileDirection="up"
-      className={`relative overflow-hidden bg-[#EAF3FB] ${className}`}
-    >
+    <section className={`relative overflow-hidden bg-[#EAF3FB] ${className}`}>
       <Image
         src={data.image.src}
         alt={data.image.alt}
@@ -79,6 +74,6 @@ export default function CourierBanner1({
           </div>
         </div>
       </div>
-    </ScrollReveal>
+    </section>
   );
 }
